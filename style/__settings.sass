@@ -11,11 +11,6 @@ li
     list-style: none
 a
     text-decoration: none
-
-.buttons
-    display: flex
-    flex-direction: column
-
 .btn
     border-radius: 50px
     text-align: center
@@ -24,12 +19,62 @@ a
     cursor: pointer
     color: #fff
     transition: 0.3s
-    &:hover
-        box-shadow: 0 0 10px rgba(black , 0.5) inset
+    font-size: 20px
+    @media screen and ( max-width: 557px )
+        font-size: 14px
+    &__flare_s
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(248.67deg, rgba(255, 255, 255, 0) 30.84%, rgba(255, 255, 255, 0.29) 46.06%, rgba(255, 255, 255, 0) 64.04%)
+            width: 150px
+            height: 100%
+            z-index: 2
+    &__flare_f
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: 0
+            background: linear-gradient(248.67deg, rgba(255, 255, 255, 0) 30.84%, rgba(255, 255, 255, 0.29) 46.06%, rgba(255, 255, 255, 0) 64.04%)
+            width: 150px
+            height: 100%
+            z-index: 2
+    &__flare_m
+        &::after
+            content: ''
+            position: absolute
+            left: 70px
+            top: 0
+            background: linear-gradient(248.67deg, rgba(255, 255, 255, 0) 30.84%, rgba(255, 255, 255, 0.29) 46.06%, rgba(255, 255, 255, 0) 64.04%)
+    &__flare_mf
+        &::after
+            content: ''
+            position: absolute
+            right: 45px
+            top: 0
+            background: linear-gradient(248.67deg, rgba(255, 255, 255, 0) 30.84%, rgba(255, 255, 255, 0.29) 46.06%, rgba(255, 255, 255, 0) 64.04%)
     &__orange
         width: 315px
         height: 70px
         line-height: 70px
         background: linear-gradient(90deg, rgba(246, 200, 102, 0.9) -6.2%, rgba(254, 173, 53, 0.9) 100%)
-        
+        position: relative
+        z-index: 20
+        @media screen and ( max-width: 557px )
+            width: 180px
+            height: 40px
+            line-height: 40px
+        &:hover
+            box-shadow: 0 0  15px rgba(yellow, 0.5) 
+
+    &__green
+        height: 80px
+        line-height: 80px
+        background: linear-gradient(90deg, rgba(76, 217, 100, 0.9) -6.2%, rgba(50, 185, 73, 0.9) 100%)
+        border-radius: 50px
+        &:hover
+            box-shadow: 0 0  25px rgba(green, 0.5) 
 
