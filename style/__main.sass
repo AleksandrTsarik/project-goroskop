@@ -4,7 +4,6 @@
     background-repeat: no-repeat
     background-size: cover
     background-position: 50% 50%
-    //height: 100vh
     color: rgba(white , 0.6 )
     position: relative
     z-index: 100
@@ -97,8 +96,19 @@
         letter-spacing: 0.1em
         color: rgba(255, 255, 255, 0.6)
         transition: 0.3s
-        &:hover
-            text-shadow: 0 0 10px rgba(yellow, 0.7)
+        position: relative
+        &::after
+            display: block
+            content: ""
+            background-color: rgba(yellow, 0.5 )
+            height: 1px
+            width: 0%
+            transition: 0.3s
+            transform: translateX(-50%)
+            position: absolute
+            left: 50%
+        &:hover:after, &:hover:before
+            width: 100%
 
 //-------finish user------//
 
@@ -203,3 +213,83 @@
     color: rgba(255, 255, 255, 0.6)
     
 //-------finish question------//
+
+//-------conclusion------//
+
+.conclusion
+    margin: 200px 0
+    text-align: center
+    font-family: 'Bad_Script'
+    font-weight: normal
+    font-size: 25px
+    line-height: 35px
+    text-align: center
+    color: #FFFFFF
+    position: relative
+    
+    &::before
+        content: ''
+        background-image: url('../img/rune1.svg')
+        background-position: 50% 50%
+        background-repeat: no-repeat
+        background-size: 100%
+        width: 56px
+        height: 17px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        top: -80px
+        
+    &::after
+        content: ''
+        background-image: url('../img/rune2.svg')
+        background-position: 50% 50%
+        background-repeat: no-repeat
+        background-size: 100%
+        width: 56px
+        height: 17px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -80px
+        
+// .conclusion__img
+//     position: absolute
+//     opacity: 0.2
+// .conclusion__img__top
+//     right: 0
+//     top: 0
+//     img
+//         width: 300px
+//         height: 155px
+// .conclusion__img__bot
+//     left: 0
+//     img
+//         width: 165px
+//         height: 165px
+
+.conclusion__img__top
+    background-image: url('../img/eye-1.svg')
+    background-position: 50% 50% 
+    background-repeat: no-repeat
+    background-size: 100%
+    margin-right: -125px
+    opacity: 0.2
+    width: 300px
+    height: 155px
+    margin-left: auto
+    @media screen and ( max-width: 1440px )
+        background-position: 130px 50% 
+        margin-right: 0
+.conclusion__img__bot
+    background-image: url('../img/eye.svg')
+    background-position: 50% 50% 
+    background-repeat: no-repeat
+    background-size: 100%
+    opacity: 0.2
+    width: 165px
+    height: 165px
+    margin-left: -45px
+    
+
+//-------finish conclusion------//

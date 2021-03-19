@@ -351,9 +351,23 @@ a {
   color: rgba(255, 255, 255, 0.6);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  position: relative;
 }
-.prediction a:hover {
-  text-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+.prediction a::after {
+  display: block;
+  content: "";
+  background-color: rgba(255, 255, 0, 0.5);
+  height: 1px;
+  width: 0%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+}
+.prediction a:hover:after, .prediction a:hover:before {
+  width: 100%;
 }
 
 .offer {
@@ -486,6 +500,75 @@ a {
   text-align: center;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.conclusion {
+  margin: 200px 0;
+  text-align: center;
+  font-family: "Bad_Script";
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+  color: #FFFFFF;
+  position: relative;
+}
+.conclusion::before {
+  content: "";
+  background-image: url("../img/rune1.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 56px;
+  height: 17px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -80px;
+}
+.conclusion::after {
+  content: "";
+  background-image: url("../img/rune2.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 56px;
+  height: 17px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -80px;
+}
+
+.conclusion__img__top {
+  background-image: url("../img/eye-1.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-right: -125px;
+  opacity: 0.2;
+  width: 300px;
+  height: 155px;
+  margin-left: auto;
+}
+@media screen and (max-width: 1440px) {
+  .conclusion__img__top {
+    background-position: 130px 50%;
+    margin-right: 0;
+  }
+}
+
+.conclusion__img__bot {
+  background-image: url("../img/eye.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.2;
+  width: 165px;
+  height: 165px;
+  margin-left: -45px;
 }
 
 body {
