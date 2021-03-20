@@ -1,3 +1,6 @@
+$gold: rgba(246, 200, 102, 0.9)
+$green: rgba(76, 217, 100, 0.9) 
+    
 h1, h2, h3, h4, h5, h6, p
     margin: 0
 
@@ -20,6 +23,14 @@ a
     color: #fff
     transition: 0.3s
     font-size: 20px
+
+    position: relative
+    appearance: none
+    overflow: hidden
+    // border: solid 4px transparent
+    // &:hover
+    //     border: solid 4px gray
+
     @media screen and ( max-width: 557px )
         font-size: 14px
     &__flare_s
@@ -63,22 +74,28 @@ a
         background: linear-gradient(90deg, rgba(246, 200, 102, 0.9) -6.2%, rgba(254, 173, 53, 0.9) 100%)
         position: relative
         z-index: 20
+        transition: 0.3s
         @media screen and ( max-width: 557px )
             width: 180px
             height: 40px
             line-height: 40px
         &:hover
-            box-shadow: 0 0  15px rgba(yellow, 0.5) 
-
+            box-shadow: 0 0 15px rgba($gold, 0.8)
+            // background: rgba($gold , 0.8 )
     &__green
         height: 80px
         line-height: 80px
         background: linear-gradient(90deg, rgba(76, 217, 100, 0.9) -6.2%, rgba(50, 185, 73, 0.9) 100%)
         border-radius: 50px
+        transition: 0.3s
         &:hover
-            box-shadow: 0 0  25px rgba(green, 0.5) 
+            box-shadow: 0 0 15px rgba($green, 0.8) 
+            // background: rgba($green , 0.8 )
 
-
+           
 
 .color_yellow
     color: #F6C866
+    font-size: 25px
+    @media screen and ( max-width: 575px )
+        font-size: 20px
