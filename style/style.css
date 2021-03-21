@@ -163,6 +163,9 @@ a {
   right: 20px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 5px solid #202024;
 }
 .select .select__body {
   position: absolute;
