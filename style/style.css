@@ -66,6 +66,8 @@ a {
   position: absolute;
   left: 70px;
   top: 0;
+  width: 150px;
+  height: 100%;
   background: linear-gradient(248.67deg, rgba(255, 255, 255, 0) 30.84%, rgba(255, 255, 255, 0.29) 46.06%, rgba(255, 255, 255, 0) 64.04%);
 }
 .btn__flare_mf::after {
@@ -73,6 +75,8 @@ a {
   position: absolute;
   right: 45px;
   top: 0;
+  width: 150px;
+  height: 100%;
   background: linear-gradient(248.67deg, rgba(255, 255, 255, 0) 30.84%, rgba(255, 255, 255, 0.29) 46.06%, rgba(255, 255, 255, 0) 64.04%);
 }
 .btn__orange {
@@ -118,6 +122,35 @@ a {
 @media screen and (max-width: 575px) {
   .color_yellow {
     font-size: 20px;
+  }
+}
+
+select {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-6.2%, rgba(228, 228, 228, 0.9)), to(rgba(203, 203, 203, 0.9)));
+  background: linear-gradient(90deg, rgba(228, 228, 228, 0.9) -6.2%, rgba(203, 203, 203, 0.9) 100%);
+  -moz-text-align-last: center;
+       text-align-last: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+select:hover {
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 575px) {
+  select {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
   }
 }
 
@@ -700,6 +733,253 @@ a {
   }
 }
 
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  margin: auto;
+  overflow: hidden;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: black;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.modal__inner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100vh;
+  min-width: 100%;
+  z-index: 200;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.optgroup {
+  margin: 0;
+  padding: 0;
+  max-height: 65px;
+  height: 100vh;
+}
+
+.modal__footer {
+  margin-bottom: 30px;
+}
+.modal__footer div {
+  position: relative;
+}
+.modal__footer div::before {
+  content: "";
+  background-image: url("../img/eye.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 0;
+  bottom: 55px;
+  opacity: 0.2;
+}
+@media screen and (max-width: 575px) {
+  .modal__footer div::before {
+    width: 50px;
+    height: 50px;
+    background-position: -10px 50%;
+    bottom: 5px;
+  }
+}
+
+.modal__title {
+  position: relative;
+  font-family: Bad Script;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+@media screen and (max-width: 575px) {
+  .modal__title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.modal__title::before {
+  content: "";
+  background-image: url("../img/eye-1.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 140px;
+  height: 80px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+@media screen and (max-width: 575px) {
+  .modal__title::before {
+    width: 85px;
+    height: 45px;
+    background-position: 25px 50%;
+  }
+}
+.modal__title_size {
+  padding: 0 110px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 575px) {
+  .modal__title_size {
+    padding: 0 40px;
+  }
+}
+
+.strip {
+  width: 100vw;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.modal__form {
+  text-align: center;
+  position: relative;
+}
+
+.form__title {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #F6C866;
+  margin: 35px 0;
+}
+
+.modal__form__info {
+  margin: 0 auto;
+}
+
+.modal__form__info > div {
+  margin: 17px 0;
+}
+@media screen and (max-width: 575px) {
+  .modal__form__info > div {
+    margin: 10px 0;
+  }
+}
+
+.modal__form__info__select {
+  width: 315px;
+}
+@media screen and (max-width: 575px) {
+  .modal__form__info__select {
+    width: 180px;
+  }
+}
+
+.select {
+  width: 315px;
+  position: relative;
+}
+@media screen and (max-width: 575px) {
+  .select {
+    width: 180px;
+  }
+}
+.select .select__header {
+  position: relative;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-6.2%, rgba(228, 228, 228, 0.9)), to(rgba(203, 203, 203, 0.9)));
+  background: linear-gradient(90deg, rgba(228, 228, 228, 0.9) -6.2%, rgba(203, 203, 203, 0.9) 100%);
+  color: #202024;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (max-width: 575px) {
+  .select .select__header {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.select .select__header:hover {
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.select .select__icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.select .select__body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  display: none;
+  z-index: 100;
+  color: #202024;
+  background: #e4e4e4;
+  border-radius: 10px;
+  height: 200px;
+  overflow-y: scroll;
+}
+.select .select__item {
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 0;
+}
+@media screen and (max-width: 575px) {
+  .select .select__item {
+    font-size: 14px;
+  }
+}
+.select .select__item:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #202024;
+}
+
+.select.is-active .select__body {
+  display: block;
+}
+
 body {
   width: 100vw;
   min-height: 100vh;
@@ -722,4 +1002,9 @@ body {
   .container {
     padding: 0;
   }
+}
+
+.modal__container {
+  max-width: 620px;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

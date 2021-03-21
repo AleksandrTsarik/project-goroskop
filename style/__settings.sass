@@ -23,14 +23,9 @@ a
     color: #fff
     transition: 0.3s
     font-size: 20px
-
     position: relative
     appearance: none
     overflow: hidden
-    // border: solid 4px transparent
-    // &:hover
-    //     border: solid 4px gray
-
     @media screen and ( max-width: 557px )
         font-size: 14px
     &__flare_s
@@ -59,6 +54,8 @@ a
             position: absolute
             left: 70px
             top: 0
+            width: 150px
+            height: 100%
             background: linear-gradient(248.67deg, rgba(255, 255, 255, 0) 30.84%, rgba(255, 255, 255, 0.29) 46.06%, rgba(255, 255, 255, 0) 64.04%)
     &__flare_mf
         &::after
@@ -66,6 +63,8 @@ a
             position: absolute
             right: 45px
             top: 0
+            width: 150px
+            height: 100%
             background: linear-gradient(248.67deg, rgba(255, 255, 255, 0) 30.84%, rgba(255, 255, 255, 0.29) 46.06%, rgba(255, 255, 255, 0) 64.04%)
     &__orange
         width: 315px
@@ -99,3 +98,24 @@ a
     font-size: 25px
     @media screen and ( max-width: 575px )
         font-size: 20px
+
+
+select
+    width: 100%
+    height: 70px
+    line-height: 70px
+    border-radius: 50px
+    outline: none
+    border: none
+    font-size: 20px
+    text-align: center
+    background: linear-gradient(90deg, rgba(228, 228, 228, 0.9) -6.2%, rgba(203, 203, 203, 0.9) 100%)
+    text-align-last: center
+    cursor: pointer
+    transition: 0.3s
+    &:hover
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+    @media screen and ( max-width: 575px )
+        height: 40px
+        line-height: 40px
+        font-size: 14px

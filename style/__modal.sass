@@ -1,0 +1,179 @@
+.modal
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 100
+    margin: auto
+    overflow: hidden
+.modal__overlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    background: black
+    opacity: 0.9
+    z-index: 10
+.modal__inner
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    height: 100vh
+    min-width: 100%
+    z-index: 200
+    opacity: 1
+    display: flex
+    flex-direction: column
+
+.modal__content
+    flex: 1 0 auto
+.optgroup
+    margin: 0
+    padding: 0
+    max-height: 65px
+    height: 100vh
+.modal__footer
+    margin-bottom: 30px
+    div
+        position: relative
+        &::before
+            content: ''
+            background-image: url('../img/eye.svg')
+            background-position: 50% 50%
+            background-repeat: no-repeat
+            background-size: 100%
+            width: 90px
+            height: 90px
+            position: absolute
+            left: 0
+            bottom: 55px
+            opacity: 0.2
+            @media screen and ( max-width: 575px )
+                width: 50px
+                height: 50px
+                background-position: -10px 50%
+                bottom: 5px
+
+.modal__title
+    position: relative
+    font-family: Bad Script
+    font-style: normal
+    font-weight: normal
+    font-size: 25px
+    line-height: 35px
+    text-align: center
+    color: #FFFFFF
+    opacity: 0.6
+    @media screen and ( max-width: 575px )
+        font-size: 14px
+        line-height: 20px
+    &::before
+        content: ''
+        background-image: url('../img/eye-1.svg')
+        background-position: 50% 50%
+        background-repeat: no-repeat
+        background-size: 100%
+        width: 140px
+        height: 80px
+        position: absolute
+        right: 0
+        bottom: 0
+        opacity: 0.6
+        @media screen and ( max-width: 575px )
+            width: 85px
+            height: 45px
+            background-position: 25px 50%
+    &_size
+        padding: 0 110px
+        margin-top: 50px
+        @media screen and ( max-width: 575px )
+            padding: 0 40px
+.strip
+    width: 100vw
+    height: 1px
+    background-color: rgba(white , 0.6)
+
+.modal__form
+    text-align: center
+    position: relative
+
+.form__title
+    font-weight: normal
+    font-size: 16px
+    line-height: 25px
+    text-align: center
+    text-transform: uppercase
+    color: #F6C866
+    margin: 35px 0
+.modal__form__info
+    margin: 0 auto
+.modal__form__info > div
+    margin: 17px 0
+    @media screen and ( max-width: 575px )
+        margin: 10px 0
+
+.modal__form__info__select
+    width: 315px
+    @media screen and ( max-width: 575px )  
+        width: 180px
+
+
+
+
+
+.select
+    width: 315px
+    position: relative
+    @media screen and ( max-width: 575px )
+        width: 180px 
+    .select__header
+        position: relative
+        height: 70px
+        line-height: 70px
+        border-radius: 50px
+        text-align: center
+        background:  linear-gradient(90deg, rgba(228, 228, 228, 0.9) -6.2%, rgba(203, 203, 203, 0.9) 100%)
+        color: #202024
+        cursor: pointer
+        transition: 0.3s
+        @media screen and ( max-width: 575px )
+            height: 40px
+            line-height: 40px
+        &:hover
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+    .select__icon
+        position: absolute
+        top: 50%
+        right: 20px
+        transform: translateY(-50%)
+    .select__body
+        position: absolute
+        left: 0
+        right: 0
+        top: 100%
+        display: none
+        z-index: 100
+        color: #202024
+        background: rgba(228, 228, 228, 1) 
+        border-radius: 10px
+        height: 200px
+        overflow-y: scroll
+    .select__item
+        display: block
+        transition: 0.3s
+        cursor: pointer
+        font-size: 20px
+        padding: 5px 0
+        @media screen and ( max-width: 575px )
+
+            font-size: 14px
+        &:hover
+            background: rgba(black ,0.1 )
+            color: #202024
+
+.select.is-active .select__body
+    display: block
