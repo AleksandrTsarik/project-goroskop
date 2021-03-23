@@ -1,5 +1,5 @@
 
-let select = function() {
+
     let selectHeader = document.querySelectorAll('.select__header');
     let selectItem = document.querySelectorAll('.select__item');
     selectHeader.forEach (item => {
@@ -10,11 +10,10 @@ let select = function() {
         item.addEventListener('click', selectChoose)
     });
 
-    // document.onclick = function (e){
-    //     if (event.target.className != 'is-active'){
-    //         select__body.style.display = 'none'
-    //     }
-    // };
+    // document.addEventListener('click', () => {
+        
+    // });        
+   
 
     function selectToggle() {
         this.parentElement.classList.toggle('is-active')
@@ -22,13 +21,25 @@ let select = function() {
 
     function selectChoose() {
         let text = this.innerText;
-            select = this.closest('.select'),
-        currentText = this.closest('.select').querySelector('.select__curent');
+            perentItem = this.closest('.select'),
+            currentText = this.closest('.select').querySelector('.select__curent');
         currentText.innerText = text;
-        select.classList.remove('is-active');
+        perentItem.classList.remove('is-active');
+        perentItem.classList.add('is-selected');
     }
-};
-
-select();
 
 
+
+const form = document.querySelector('.modal__form__birth');
+const selects = document.querySelectorAll('.select');
+
+form.addEventListener('submit', event => {  
+    event.preventDefault();
+    selects.forEach (item => {        
+        if(!item.classList.contains('is-selected')) {
+
+            item.classList.add('error')
+            
+        }
+    });
+});
